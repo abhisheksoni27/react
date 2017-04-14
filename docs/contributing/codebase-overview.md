@@ -38,7 +38,7 @@ var setInnerHTML = require('setInnerHTML');
 
 Haste was originally developed for giant apps like Facebook. It's easy to move files to different folders and import them without worrying about relative paths. The fuzzy file search in any editor always takes you to the correct place thanks to globally unique names.
 
-React itself was extracted from the Facebook codebase and uses Haste for historical reasons. In the future, we will probably [migrate React to use CommonJS or ES Modules](https://github.com/facebook/react/issues/6336) to be more aligned with the community. However, this requires changes in Facebook internal infrastructure so it is unlikely to happen very soon.
+React itself was extracted from the Facebook codebase and uses Haste for historical reasons. In the future, we will probably [migrate React to use CommonJS or ES Modules](https://github.com/facebook/react/issues/6336) to be more aligned with the community. However, this requires changes in Facebook's internal infrastructure so it is unlikely to happen very soon.
 
 **Haste will make more sense to you if you remember a few rules:**
 
@@ -223,7 +223,7 @@ module.exports = ReactDOMComponent;
 
 The `Mixin` in this code has no relation to React `mixins` feature. It is just a way of grouping a few methods under an object. Those methods may later get attached to some other class. We use this pattern in a few places although we try to avoid it in the new code.
 
-Equivalent code in ES6 would look like this:
+The equivalent code in ES6 would look like this:
 
 ```js
 class ReactDOMComponent {
@@ -378,7 +378,7 @@ It is important to understand that the stack reconciler always processes the com
 
 The "fiber" reconciler is a new effort aiming to resolve the problems inherent in the stack reconciler and fix a few long-standing issues.
 
-It is a complete rewrite of the reconciler and is currently [in active development](https://github.com/facebook/react/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20fiber).
+It is a complete rewrite of the reconciler and is currently [in active development](https://github.com/facebook/react/pulls?utf8=%E2%9C%93&q=is:pr%20is:open%20fiber).
 
 Its main goals are:
 
